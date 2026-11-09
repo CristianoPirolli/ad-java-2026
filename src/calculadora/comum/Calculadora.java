@@ -7,4 +7,11 @@ import java.rmi.RemoteException;
 public interface Calculadora extends Remote {
     // Todo método remoto deve lançar RemoteException
     int somar(int a, int b) throws RemoteException;
+
+    int subtrair(int a, int b) throws RemoteException;
+
+    int multiplicar(int a, int b) throws RemoteException;
+
+    // Retorna double para não perder a parte fracionária (ex.: 7 / 2 = 3.5)
+    double dividir(int a, int b) throws RemoteException;
 }
